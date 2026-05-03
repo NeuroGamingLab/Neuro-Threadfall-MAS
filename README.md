@@ -24,11 +24,12 @@ The **main technology objective** of Threadfall is to field and study **ML agent
 
 Threadfall is a **Streamlit monolith**: almost all runtime state lives in `st.session_state`, with periodic JSON snapshots to disk (`SETTINGS.save_path`). The diagrams below are the mental model for modules and external services.
 
-> **Viewing diagrams:** Fenced blocks use [Mermaid](https://mermaid.js.org/) (`flowchart`, `sequenceDiagram`). They render on GitHub and in Markdown previews that enable Mermaid; if you only see source, switch viewer or paste the block into the [Mermaid Live Editor](https://mermaid.live).
+> **Viewing diagrams:** Fenced blocks use [Mermaid](https://mermaid.js.org/) (`flowchart`, `sequenceDiagram`). They render on GitHub and in Markdown previews that enable Mermaid; if you only see source, switch viewer or paste the block into the [Mermaid Live Editor](https://mermaid.live). Charts set an explicit **dark** theme so text and edges stay visible on GitHub’s canvas (light-on-light is a common default failure mode).
 
 ### Component diagram
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 flowchart TB
   subgraph UILayer["Presentation layer"]
     APP["app.py\nStreamlit pages + router"]
@@ -71,6 +72,7 @@ flowchart TB
 ### Session state and persistence
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 flowchart LR
   SS["st.session_state\nworld, factions, sectors,\nmissions, mas, rivals, log..."]
   SNAP["snapshot_for_undo\nlimited stack"]
@@ -98,6 +100,7 @@ There are **three distinct agent-like loops** in the prototype:
 #### Faction autonomous cycle (MAS + memory + LLM)
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 sequenceDiagram
   participant Dash as "Agent Dashboard or autoplay"
   participant Game as "game.simulate_agent_round"
@@ -139,6 +142,7 @@ sequenceDiagram
 #### Rival units (Training Lab / tail of faction round)
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 flowchart TD
   A[For each configured ai_agent] --> B[rival_observation bucketed_world]
   B --> C{rival_policy mode}
@@ -157,6 +161,7 @@ Rivals **do not** share the faction MAS layer; they use `st.session_state["rival
 ### Player expedition resolution (high level)
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 flowchart LR
   P[Player_resolve_mission] --> E{pending_encounter}
   E -->|yes| X[encounters_module\nstage_results_deltas]
