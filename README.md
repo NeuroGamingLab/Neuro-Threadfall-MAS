@@ -30,9 +30,9 @@ Threadfall is a **Streamlit monolith**: almost all runtime state lives in `st.se
 
 ```mermaid
 flowchart TB
-  subgraph UI["Presentation layer"]
+  subgraph UILayer["Presentation layer"]
     APP["app.py\nStreamlit pages + router"]
-    UI["threadfall/ui.py\nwidgets, charts, MAS panel"]
+    UIMod["threadfall/ui.py\nwidgets, charts, MAS panel"]
   end
 
   subgraph Core["Simulation and agents"]
@@ -52,9 +52,9 @@ flowchart TB
     CFG["threadfall/config.py"]
   end
 
-  APP --> UI
+  APP --> UIMod
   APP --> GAME
-  UI --> GAME
+  UIMod --> GAME
   GAME --> MAS
   GAME --> LLM
   GAME --> MEM
