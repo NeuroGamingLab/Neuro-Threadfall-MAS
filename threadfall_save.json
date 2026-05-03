@@ -1,0 +1,1326 @@
+{
+  "world_state": {
+    "cycle": 6,
+    "intel": 88,
+    "supplies": 0,
+    "threat_clock": 20,
+    "sector_stability": 20
+  },
+  "sector_control": {
+    "Archive Chamber Theta": {
+      "controller": "Glass Archive",
+      "stability": 63,
+      "heat": 26,
+      "interest": {
+        "Helios Prospectors": 8,
+        "Glass Archive": 4,
+        "Morrow Division": 2
+      }
+    },
+    "Inversion Causeway": {
+      "controller": "Morrow Division",
+      "stability": 40,
+      "heat": 33,
+      "interest": {
+        "Helios Prospectors": 2,
+        "Glass Archive": 0,
+        "Morrow Division": 15
+      }
+    },
+    "Flooded Transit Gallery": {
+      "controller": "Neutral",
+      "stability": 57,
+      "heat": 25,
+      "interest": {
+        "Helios Prospectors": 2,
+        "Glass Archive": 0,
+        "Morrow Division": 0
+      }
+    },
+    "Vault Spine 3": {
+      "controller": "Morrow Division",
+      "stability": 57,
+      "heat": 34,
+      "interest": {
+        "Helios Prospectors": 6,
+        "Glass Archive": 0,
+        "Morrow Division": 10
+      }
+    },
+    "Thermal Lens Cathedral": {
+      "controller": "Neutral",
+      "stability": 58,
+      "heat": 17,
+      "interest": {
+        "Helios Prospectors": 0,
+        "Glass Archive": 0,
+        "Morrow Division": 2
+      }
+    },
+    "Resonance Stairwell": {
+      "controller": "Morrow Division",
+      "stability": 36,
+      "heat": 29,
+      "interest": {
+        "Helios Prospectors": 0,
+        "Glass Archive": 0,
+        "Morrow Division": 16
+      }
+    },
+    "Signal Orchard": {
+      "controller": "Helios Prospectors",
+      "stability": 54,
+      "heat": 27,
+      "interest": {
+        "Helios Prospectors": 8,
+        "Glass Archive": 4,
+        "Morrow Division": 2
+      }
+    },
+    "Mirror Fault Atrium": {
+      "controller": "Glass Archive",
+      "stability": 66,
+      "heat": 39,
+      "interest": {
+        "Helios Prospectors": 0,
+        "Glass Archive": 11,
+        "Morrow Division": 8
+      }
+    },
+    "Tide-Locked Rotunda": {
+      "controller": "Neutral",
+      "stability": 68,
+      "heat": 25,
+      "interest": {
+        "Helios Prospectors": 6,
+        "Glass Archive": 0,
+        "Morrow Division": 0
+      }
+    },
+    "Obsidian Switchyard": {
+      "controller": "Neutral",
+      "stability": 46,
+      "heat": 26,
+      "interest": {
+        "Helios Prospectors": 2,
+        "Glass Archive": 0,
+        "Morrow Division": 0
+      }
+    },
+    "Mnemonic Scriptorium": {
+      "controller": "Neutral",
+      "stability": 53,
+      "heat": 29,
+      "interest": {
+        "Helios Prospectors": 2,
+        "Glass Archive": 0,
+        "Morrow Division": 0
+      }
+    },
+    "Null Pump Station": {
+      "controller": "Neutral",
+      "stability": 61,
+      "heat": 15,
+      "interest": {
+        "Helios Prospectors": 0,
+        "Glass Archive": 0,
+        "Morrow Division": 0
+      }
+    },
+    "Gravimetric Choir": {
+      "controller": "Helios Prospectors",
+      "stability": 58,
+      "heat": 24,
+      "interest": {
+        "Helios Prospectors": 7,
+        "Glass Archive": 0,
+        "Morrow Division": 2
+      }
+    }
+  },
+  "sector_graph": {
+    "Archive Chamber Theta": [
+      "Mnemonic Scriptorium",
+      "Mirror Fault Atrium",
+      "Signal Orchard"
+    ],
+    "Inversion Causeway": [
+      "Mirror Fault Atrium",
+      "Vault Spine 3",
+      "Gravimetric Choir"
+    ],
+    "Flooded Transit Gallery": [
+      "Obsidian Switchyard",
+      "Tide-Locked Rotunda",
+      "Null Pump Station"
+    ],
+    "Vault Spine 3": [
+      "Mnemonic Scriptorium",
+      "Inversion Causeway",
+      "Obsidian Switchyard"
+    ],
+    "Thermal Lens Cathedral": [
+      "Mirror Fault Atrium",
+      "Obsidian Switchyard",
+      "Gravimetric Choir"
+    ],
+    "Resonance Stairwell": [
+      "Tide-Locked Rotunda",
+      "Mnemonic Scriptorium",
+      "Gravimetric Choir"
+    ],
+    "Signal Orchard": [
+      "Archive Chamber Theta",
+      "Mirror Fault Atrium",
+      "Null Pump Station"
+    ],
+    "Mirror Fault Atrium": [
+      "Archive Chamber Theta",
+      "Signal Orchard",
+      "Inversion Causeway",
+      "Thermal Lens Cathedral"
+    ],
+    "Tide-Locked Rotunda": [
+      "Flooded Transit Gallery",
+      "Resonance Stairwell"
+    ],
+    "Obsidian Switchyard": [
+      "Vault Spine 3",
+      "Thermal Lens Cathedral",
+      "Flooded Transit Gallery"
+    ],
+    "Mnemonic Scriptorium": [
+      "Archive Chamber Theta",
+      "Resonance Stairwell",
+      "Vault Spine 3"
+    ],
+    "Null Pump Station": [
+      "Flooded Transit Gallery",
+      "Signal Orchard"
+    ],
+    "Gravimetric Choir": [
+      "Inversion Causeway",
+      "Thermal Lens Cathedral",
+      "Resonance Stairwell"
+    ]
+  },
+  "factions": [
+    {
+      "name": "Helios Prospectors",
+      "stance": "Transactional",
+      "pressure": 29,
+      "interest": "Artifact extraction",
+      "goal": "Secure high-yield relics before the ruin fully destabilizes.",
+      "preferred_objectives": [
+        "Recover unstable artifact",
+        "Restore extraction relay"
+      ],
+      "preferred_sectors": [
+        "Vault Spine 3",
+        "Inversion Causeway"
+      ],
+      "rival": "Glass Archive",
+      "leverage": 51,
+      "recent_memory": [
+        "Cycle 5: Morrow Division operation in Resonance Stairwell ended in success.",
+        "Cycle 5: Morrow Division operation in Vault Spine 3 ended in success.",
+        "Cycle 5: received bargain from Morrow Division.",
+        "Cycle 5: negotiated with Glass Archive via align.",
+        "Cycle 5: extract @ Vault Spine 3. Arc: Helios Prospectors: map two high-signal sectors, bank leverage, then one major extraction push\u2014not every cycle.",
+        "Cycle 6: Morrow Division operation in Resonance Stairwell ended in success.",
+        "Cycle 6: Compromised at Signal Orchard pursuing Document anomaly rules.",
+        "Cycle 6: Success at Signal Orchard pursuing Reinforce extraction relay."
+      ],
+      "last_outcome": "Success",
+      "campaign_arc": "Helios Prospectors: map two high-signal sectors, bank leverage, then one major extraction push\u2014not every cycle."
+    },
+    {
+      "name": "Glass Archive",
+      "stance": "Aligned",
+      "pressure": 16,
+      "interest": "Knowledge capture",
+      "goal": "Catalog anomaly behavior and preserve non-repeatable discoveries.",
+      "preferred_objectives": [
+        "Map anomaly corridor",
+        "Rescue missing survey team"
+      ],
+      "preferred_sectors": [
+        "Archive Chamber Theta",
+        "Thermal Lens Cathedral"
+      ],
+      "rival": "Morrow Division",
+      "leverage": 29,
+      "recent_memory": [
+        "Cycle 4: received align from Helios Prospectors.",
+        "Cycle 4: negotiated with Morrow Division via bargain.",
+        "Cycle 4: fortify @ Mirror Fault Atrium. Arc: Glass Archive: stabilize archive-adjacent reads before contesting hot relic lanes.",
+        "Cycle 5: negotiated with Morrow Division via bargain.",
+        "Cycle 5: fortify @ Archive Chamber Theta. Arc: Glass Archive: stabilize archive-adjacent reads before contesting hot relic lanes.",
+        "Cycle 5: received align from Helios Prospectors.",
+        "Cycle 6: Helios Prospectors operation in Signal Orchard ended in compromised.",
+        "Cycle 6: Helios Prospectors operation in Signal Orchard ended in success."
+      ],
+      "last_outcome": "Compromised",
+      "campaign_arc": "Glass Archive: stabilize archive-adjacent reads before contesting hot relic lanes."
+    },
+    {
+      "name": "Morrow Division",
+      "stance": "Aligned",
+      "pressure": 18,
+      "interest": "Territorial denial",
+      "goal": "Deny access to unstable sectors and force all rivals into retreat.",
+      "preferred_objectives": [
+        "Restore extraction relay",
+        "Recover unstable artifact"
+      ],
+      "preferred_sectors": [
+        "Flooded Transit Gallery",
+        "Vault Spine 3"
+      ],
+      "rival": "Helios Prospectors",
+      "leverage": 61,
+      "recent_memory": [
+        "Cycle 4: extract @ Inversion Causeway. Arc: Morrow Division: lock two transit choke sectors before chaining sabotage; deny first, spike second.",
+        "Cycle 5: Compromised at Gravimetric Choir pursuing Calibrate observation relay.",
+        "Cycle 5: Success at Resonance Stairwell pursuing Document anomaly rules.",
+        "Cycle 5: Success at Vault Spine 3 pursuing Map anomaly corridor.",
+        "Cycle 5: received bargain from Glass Archive.",
+        "Cycle 5: negotiated with Helios Prospectors via bargain.",
+        "Cycle 5: extract @ Mirror Fault Atrium. Arc: Morrow Division: lock two transit choke sectors before chaining sabotage; deny first, spike second.",
+        "Cycle 6: Success at Resonance Stairwell pursuing Map anomaly corridor."
+      ],
+      "last_outcome": "Success",
+      "campaign_arc": "Morrow Division: lock two transit choke sectors before chaining sabotage; deny first, spike second."
+    }
+  ],
+  "inventory": [
+    {
+      "name": "Echo Spindle",
+      "effect": "Lets the squad recover one extra field memory after a success.",
+      "rarity": "Uncommon",
+      "source_sector": "Archive Chamber Theta",
+      "cycle_found": 3
+    },
+    {
+      "name": "Witness Lens",
+      "effect": "Boosts insight gained from memory-heavy sectors.",
+      "rarity": "Legendary",
+      "source_sector": "Vault Spine 3",
+      "cycle_found": 5
+    },
+    {
+      "name": "Echo Spindle",
+      "effect": "Lets the squad recover one extra field memory after a success.",
+      "rarity": "Uncommon",
+      "source_sector": "Signal Orchard",
+      "cycle_found": 6
+    }
+  ],
+  "history": [
+    {
+      "cycle": 2,
+      "outcome": "Compromised",
+      "type": "player_expedition",
+      "actor": "Orpheus Unit",
+      "mission_id": "096ddc55-854e-4d4f-a418-a01b993883ab",
+      "sector": "Mirror Fault Atrium",
+      "objective": "Recover unstable artifact",
+      "sponsor": "Helios Prospectors",
+      "rival": "Glass Archive",
+      "mission_type": "standard",
+      "sector_tags": [
+        "mirrors",
+        "material",
+        "gravity"
+      ],
+      "anomaly_tags": [
+        "material",
+        "thermal"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": false,
+          "chance": 0.64
+        }
+      ],
+      "committed_supplies": 1,
+      "reward_intel": 10,
+      "artifact_found": 0,
+      "summary": "The expedition into Mirror Fault Atrium fractured early. Helios Prospectors gained leverage while Glass Archive repositioned and the ruin escalated."
+    },
+    {
+      "cycle": 3,
+      "outcome": "Success",
+      "type": "player_expedition",
+      "actor": "Orpheus Unit",
+      "mission_id": "a5e9cd78-f948-49e0-abc1-9ed7f09d25b9",
+      "sector": "Archive Chamber Theta",
+      "objective": "Restore extraction relay",
+      "sponsor": "Helios Prospectors",
+      "rival": "Glass Archive",
+      "mission_type": "extraction",
+      "sector_tags": [
+        "archival",
+        "mirrors",
+        "acoustic"
+      ],
+      "anomaly_tags": [
+        "gravity"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": true,
+          "chance": 0.685
+        },
+        {
+          "stage": "Contact",
+          "success": true,
+          "chance": 0.665
+        },
+        {
+          "stage": "Objective",
+          "success": true,
+          "chance": 0.625
+        },
+        {
+          "stage": "Extraction",
+          "success": true,
+          "chance": 0.645
+        }
+      ],
+      "committed_supplies": 1,
+      "reward_intel": 8,
+      "artifact_found": 1,
+      "summary": "Orpheus Unit stabilized Archive Chamber Theta and secured new insight under pressure from Helios Prospectors while blunting Glass Archive."
+    },
+    {
+      "cycle": 4,
+      "outcome": "Compromised",
+      "type": "player_expedition",
+      "actor": "Orpheus Unit",
+      "mission_id": "30396c47-ca34-476b-beb8-42b54455c8b8",
+      "sector": "Inversion Causeway",
+      "objective": "Map anomaly corridor",
+      "sponsor": "Glass Archive",
+      "rival": "Morrow Division",
+      "mission_type": "survey",
+      "sector_tags": [
+        "gravity",
+        "mechanical",
+        "mirrors"
+      ],
+      "anomaly_tags": [
+        "acoustic"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": true,
+          "chance": 0.93
+        },
+        {
+          "stage": "Contact",
+          "success": true,
+          "chance": 0.91
+        },
+        {
+          "stage": "Objective",
+          "success": false,
+          "chance": 0.88
+        }
+      ],
+      "committed_supplies": 0,
+      "reward_intel": 13,
+      "artifact_found": 0,
+      "summary": "The expedition into Inversion Causeway fractured early. Glass Archive gained leverage while Morrow Division repositioned and the ruin escalated."
+    },
+    {
+      "cycle": 5,
+      "outcome": "Compromised",
+      "type": "ai_expedition",
+      "actor": "Aegis Unit",
+      "mission_id": "8746fe43-cb80-4d75-b407-875e73c4004e",
+      "sector": "Gravimetric Choir",
+      "objective": "Calibrate observation relay",
+      "sponsor": "Morrow Division",
+      "rival": "Helios Prospectors",
+      "mission_type": "survey",
+      "sector_tags": [
+        "gravity",
+        "acoustic",
+        "thermal"
+      ],
+      "anomaly_tags": [
+        "liminal"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": true,
+          "chance": 0.855
+        },
+        {
+          "stage": "Contact",
+          "success": true,
+          "chance": 0.835
+        },
+        {
+          "stage": "Objective",
+          "success": false,
+          "chance": 0.805
+        }
+      ],
+      "committed_supplies": 0,
+      "reward_intel": 16,
+      "artifact_found": 0,
+      "summary": "The expedition into Gravimetric Choir fractured early. Morrow Division gained leverage while Helios Prospectors repositioned and the ruin escalated."
+    },
+    {
+      "cycle": 5,
+      "outcome": "Success",
+      "type": "ai_expedition",
+      "actor": "Vanta Cell",
+      "mission_id": "afbef76d-568b-4a62-b7b4-f2593531221c",
+      "sector": "Resonance Stairwell",
+      "objective": "Document anomaly rules",
+      "sponsor": "Morrow Division",
+      "rival": "Helios Prospectors",
+      "mission_type": "survey",
+      "sector_tags": [
+        "acoustic",
+        "gravity",
+        "liminal"
+      ],
+      "anomaly_tags": [
+        "acoustic"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": true,
+          "chance": 0.97
+        },
+        {
+          "stage": "Contact",
+          "success": true,
+          "chance": 0.95
+        },
+        {
+          "stage": "Objective",
+          "success": true,
+          "chance": 0.92
+        },
+        {
+          "stage": "Extraction",
+          "success": true,
+          "chance": 0.96
+        }
+      ],
+      "committed_supplies": 0,
+      "reward_intel": 19,
+      "artifact_found": 0,
+      "summary": "Vanta Cell stabilized Resonance Stairwell and secured new insight under pressure from Morrow Division while blunting Helios Prospectors."
+    },
+    {
+      "cycle": 5,
+      "outcome": "Success",
+      "type": "ai_expedition",
+      "actor": "Orchid Team",
+      "mission_id": "6adc7698-be80-4e5b-afa3-1189cdfb20dd",
+      "sector": "Vault Spine 3",
+      "objective": "Map anomaly corridor",
+      "sponsor": "Morrow Division",
+      "rival": "Helios Prospectors",
+      "mission_type": "survey",
+      "sector_tags": [
+        "mechanical",
+        "archival",
+        "thermal"
+      ],
+      "anomaly_tags": [
+        "liminal"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": true,
+          "chance": 0.755
+        },
+        {
+          "stage": "Contact",
+          "success": true,
+          "chance": 0.735
+        },
+        {
+          "stage": "Objective",
+          "success": true,
+          "chance": 0.705
+        },
+        {
+          "stage": "Extraction",
+          "success": true,
+          "chance": 0.745
+        }
+      ],
+      "committed_supplies": 0,
+      "reward_intel": 16,
+      "artifact_found": 1,
+      "summary": "Orchid Team stabilized Vault Spine 3 and secured new insight under pressure from Morrow Division while blunting Helios Prospectors."
+    },
+    {
+      "cycle": 6,
+      "outcome": "Success",
+      "type": "ai_expedition",
+      "actor": "Aegis Unit",
+      "mission_id": "3264da4a-5c26-4da1-a843-ed4bd9b4541d",
+      "sector": "Resonance Stairwell",
+      "objective": "Map anomaly corridor",
+      "sponsor": "Morrow Division",
+      "rival": "Helios Prospectors",
+      "mission_type": "survey",
+      "sector_tags": [
+        "acoustic",
+        "gravity",
+        "liminal"
+      ],
+      "anomaly_tags": [
+        "acoustic"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": true,
+          "chance": 0.96
+        },
+        {
+          "stage": "Contact",
+          "success": true,
+          "chance": 0.94
+        },
+        {
+          "stage": "Objective",
+          "success": true,
+          "chance": 0.91
+        },
+        {
+          "stage": "Extraction",
+          "success": true,
+          "chance": 0.95
+        }
+      ],
+      "committed_supplies": 0,
+      "reward_intel": 20,
+      "artifact_found": 0,
+      "summary": "Aegis Unit stabilized Resonance Stairwell and secured new insight under pressure from Morrow Division while blunting Helios Prospectors."
+    },
+    {
+      "cycle": 6,
+      "outcome": "Compromised",
+      "type": "ai_expedition",
+      "actor": "Vanta Cell",
+      "mission_id": "1fcc63f9-92e7-4fd1-9750-1cc1fda17b4c",
+      "sector": "Signal Orchard",
+      "objective": "Document anomaly rules",
+      "sponsor": "Helios Prospectors",
+      "rival": "Glass Archive",
+      "mission_type": "survey",
+      "sector_tags": [
+        "archival",
+        "shadow",
+        "liminal"
+      ],
+      "anomaly_tags": [
+        "liminal"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": true,
+          "chance": 0.805
+        },
+        {
+          "stage": "Contact",
+          "success": false,
+          "chance": 0.785
+        }
+      ],
+      "committed_supplies": 0,
+      "reward_intel": 16,
+      "artifact_found": 0,
+      "summary": "The expedition into Signal Orchard fractured early. Helios Prospectors gained leverage while Glass Archive repositioned and the ruin escalated."
+    },
+    {
+      "cycle": 6,
+      "outcome": "Success",
+      "type": "ai_expedition",
+      "actor": "Orchid Team",
+      "mission_id": "3c7a4dfc-0c7d-4c79-a436-549bfd2344b6",
+      "sector": "Signal Orchard",
+      "objective": "Reinforce extraction relay",
+      "sponsor": "Helios Prospectors",
+      "rival": "Glass Archive",
+      "mission_type": "containment",
+      "sector_tags": [
+        "archival",
+        "shadow",
+        "liminal"
+      ],
+      "anomaly_tags": [
+        "liminal"
+      ],
+      "stage_results": [
+        {
+          "stage": "Approach",
+          "success": true,
+          "chance": 0.96
+        },
+        {
+          "stage": "Contact",
+          "success": true,
+          "chance": 0.94
+        },
+        {
+          "stage": "Objective",
+          "success": true,
+          "chance": 0.91
+        },
+        {
+          "stage": "Extraction",
+          "success": true,
+          "chance": 0.97
+        }
+      ],
+      "committed_supplies": 0,
+      "reward_intel": 12,
+      "artifact_found": 1,
+      "summary": "Orchid Team stabilized Signal Orchard and secured new insight under pressure from Helios Prospectors while blunting Glass Archive."
+    }
+  ],
+  "activities": [
+    {
+      "cycle": 4,
+      "faction": "Helios Prospectors",
+      "action": "extract",
+      "target": "Tide-Locked Rotunda",
+      "reasoning": "Helios Prospectors MAS bandit policy (obs=thr=low|sup=low|stab=mid|p=low|l=mid|c=low).",
+      "effects": {
+        "intel_delta": 5,
+        "supplies_delta": -1,
+        "threat_delta": 1,
+        "stability_delta": 0,
+        "pressure_delta": 0,
+        "leverage_delta": 4
+      },
+      "confidence": 0.55,
+      "decision_source": "mas_bandit",
+      "decision_status": "ok",
+      "memory_refs": [
+        "8cd6235c-2f9a-4aad-be9f-e3ad77bf017b",
+        "fa47b81a-7d91-477f-94df-5efc18944d67",
+        "d30e71fc-9e35-4799-a750-4ecd9ec132c0",
+        "fd355e6a-2b95-436e-b5bd-4e313456f152",
+        "c3158b35-96d2-485b-811b-0838e057eb7e"
+      ],
+      "negotiation_move": "align",
+      "negotiation_partner": "Glass Archive",
+      "mas_policy": "bandit",
+      "mas_obs": "thr=low|sup=low|stab=mid|p=low|l=mid|c=low"
+    },
+    {
+      "cycle": 4,
+      "faction": "Glass Archive",
+      "action": "fortify",
+      "target": "Mirror Fault Atrium",
+      "reasoning": "Glass Archive MAS bandit policy (obs=thr=low|sup=low|stab=mid|p=low|l=mid|c=low).",
+      "effects": {
+        "intel_delta": 0,
+        "supplies_delta": 0,
+        "threat_delta": -1,
+        "stability_delta": 2,
+        "pressure_delta": -2,
+        "leverage_delta": 0
+      },
+      "confidence": 0.55,
+      "decision_source": "mas_bandit",
+      "decision_status": "ok",
+      "memory_refs": [
+        "e1cc28f3-a9ba-4886-ab5d-77a0aea85c1b",
+        "58334bd7-77e3-4eed-829c-62d555fa1a7d",
+        "454b80ee-5f1f-4ecb-9691-6099697b535a",
+        "a86fa29b-f6a7-486f-8723-96e147baa88f",
+        "710d71d0-70e0-4bd3-a351-7746549628a8"
+      ],
+      "negotiation_move": "bargain",
+      "negotiation_partner": "Morrow Division",
+      "mas_policy": "bandit",
+      "mas_obs": "thr=low|sup=low|stab=mid|p=low|l=mid|c=low"
+    },
+    {
+      "cycle": 4,
+      "faction": "Morrow Division",
+      "action": "extract",
+      "target": "Inversion Causeway",
+      "reasoning": "Morrow Division MAS bandit policy (obs=thr=low|sup=low|stab=mid|p=mid|l=mid|c=low).",
+      "effects": {
+        "intel_delta": 2,
+        "supplies_delta": -1,
+        "threat_delta": 1,
+        "stability_delta": 0,
+        "pressure_delta": 0,
+        "leverage_delta": 4
+      },
+      "confidence": 0.55,
+      "decision_source": "mas_bandit",
+      "decision_status": "ok",
+      "memory_refs": [
+        "7eee4098-174a-473e-a64e-d11997b8c921",
+        "61597bf9-bbcc-432a-ad86-23fdf78789fd",
+        "7605b9dd-55a0-4107-a909-702f11169e20",
+        "29653bd6-447b-4f7c-b19f-c10fea7150e1",
+        "c7236ea8-7b84-448b-9baf-4e1408d563dd"
+      ],
+      "negotiation_move": "align",
+      "negotiation_partner": "Helios Prospectors",
+      "mas_policy": "bandit",
+      "mas_obs": "thr=low|sup=low|stab=mid|p=mid|l=mid|c=low"
+    },
+    {
+      "cycle": 5,
+      "faction": "Glass Archive",
+      "action": "fortify",
+      "target": "Archive Chamber Theta",
+      "reasoning": "Glass Archive MAS bandit policy (obs=thr=low|sup=low|stab=mid|p=low|l=mid|c=low).",
+      "effects": {
+        "intel_delta": 0,
+        "supplies_delta": 0,
+        "threat_delta": -1,
+        "stability_delta": 4,
+        "pressure_delta": -2,
+        "leverage_delta": 0
+      },
+      "confidence": 0.55,
+      "decision_source": "mas_bandit",
+      "decision_status": "ok",
+      "memory_refs": [
+        "0c35424c-12e5-404f-9676-92aa8192b55b",
+        "eca39526-4d75-4390-9a8b-59c4136e2445",
+        "ee4715b6-e41f-482b-a027-d56683640e69",
+        "04c3e673-570f-418f-ae32-226254a7d583",
+        "e1cc28f3-a9ba-4886-ab5d-77a0aea85c1b"
+      ],
+      "negotiation_move": "bargain",
+      "negotiation_partner": "Morrow Division",
+      "mas_policy": "bandit",
+      "mas_obs": "thr=low|sup=low|stab=mid|p=low|l=mid|c=low"
+    },
+    {
+      "cycle": 5,
+      "faction": "Morrow Division",
+      "action": "extract",
+      "target": "Mirror Fault Atrium",
+      "reasoning": "Morrow Division MAS bandit policy (obs=thr=low|sup=low|stab=mid|p=low|l=mid|c=mid).",
+      "effects": {
+        "intel_delta": 3,
+        "supplies_delta": -1,
+        "threat_delta": 1,
+        "stability_delta": 0,
+        "pressure_delta": 0,
+        "leverage_delta": 4
+      },
+      "confidence": 0.55,
+      "decision_source": "mas_bandit",
+      "decision_status": "ok",
+      "memory_refs": [
+        "4dba3b04-51c0-4b44-a3e6-d1d2492f56be",
+        "ba723a14-90fe-4048-bd23-65828957be6e",
+        "4e730e3f-8b3f-4048-b14c-da097e3fbdc7",
+        "7605b9dd-55a0-4107-a909-702f11169e20",
+        "61597bf9-bbcc-432a-ad86-23fdf78789fd"
+      ],
+      "negotiation_move": "bargain",
+      "negotiation_partner": "Helios Prospectors",
+      "mas_policy": "bandit",
+      "mas_obs": "thr=low|sup=low|stab=mid|p=low|l=mid|c=mid"
+    },
+    {
+      "cycle": 5,
+      "faction": "Helios Prospectors",
+      "action": "extract",
+      "target": "Vault Spine 3",
+      "reasoning": "Helios Prospectors MAS bandit policy (obs=thr=low|sup=low|stab=mid|p=low|l=mid|c=low).",
+      "effects": {
+        "intel_delta": 3,
+        "supplies_delta": -1,
+        "threat_delta": 1,
+        "stability_delta": 0,
+        "pressure_delta": 0,
+        "leverage_delta": 4
+      },
+      "confidence": 0.55,
+      "decision_source": "mas_bandit",
+      "decision_status": "ok",
+      "memory_refs": [
+        "8cd6235c-2f9a-4aad-be9f-e3ad77bf017b",
+        "120b5b2d-10f8-4605-9487-1e4319aa830c",
+        "fa9d5aa6-cc45-4fd9-a2bc-8a77aa6d1224",
+        "27a19663-46e8-4878-888c-a4071a0ca620",
+        "fa47b81a-7d91-477f-94df-5efc18944d67"
+      ],
+      "negotiation_move": "align",
+      "negotiation_partner": "Glass Archive",
+      "mas_policy": "bandit",
+      "mas_obs": "thr=low|sup=low|stab=mid|p=low|l=mid|c=low"
+    }
+  ],
+  "events": [
+    {
+      "cycle": 2,
+      "name": "Staging Slip",
+      "severity": "Low",
+      "sector": "Mirror Fault Atrium",
+      "source_faction": "Orpheus Unit",
+      "target_faction": "Helios Prospectors",
+      "summary": "The squad lost time and equipment before contact. One extra supply was burned stabilizing the approach.",
+      "why_now": "The entry geometry shifted and forced a rapid re-route.",
+      "player_impact": "Supplies are tighter for the next cycle; consider Survey or Resupply behavior."
+    },
+    {
+      "cycle": 4,
+      "name": "Gear Loss",
+      "severity": "Severe",
+      "sector": "Inversion Causeway",
+      "source_faction": "Orpheus Unit",
+      "target_faction": "Morrow Division",
+      "summary": "The objective zone consumed critical kit. Sector heat spiked as the squad fought to recover and disengage.",
+      "why_now": "Overlapping anomaly rules forced a retreat without stabilizing the objective site.",
+      "player_impact": "Higher heat increases risk on future expeditions in this sector and attracts faction attention."
+    },
+    {
+      "cycle": 5,
+      "name": "Gear Loss",
+      "severity": "Severe",
+      "sector": "Gravimetric Choir",
+      "source_faction": "Orpheus Unit",
+      "target_faction": "Helios Prospectors",
+      "summary": "The objective zone consumed critical kit. Sector heat spiked as the squad fought to recover and disengage.",
+      "why_now": "Overlapping anomaly rules forced a retreat without stabilizing the objective site.",
+      "player_impact": "Higher heat increases risk on future expeditions in this sector and attracts faction attention."
+    },
+    {
+      "cycle": 6,
+      "name": "Injury Report",
+      "severity": "Elevated",
+      "sector": "Signal Orchard",
+      "source_faction": "Vanta Cell",
+      "target_faction": "Helios Prospectors",
+      "summary": "First contact produced an injury and scrambled field notes. Some intel was lost during extraction.",
+      "why_now": "The anomaly rules were misread during the contact window.",
+      "player_impact": "Intel gain is partially negated; consider running a Survey mission next to rebuild understanding."
+    }
+  ],
+  "counter_missions": [],
+  "negotiations": [
+    {
+      "cycle": 4,
+      "source": "Helios Prospectors",
+      "partner": "Glass Archive",
+      "move": "align",
+      "terms": "Collaborate on artifact extraction, sharing knowledge for mutual benefit.",
+      "confidence": 0.67,
+      "source_model": "llama3.2:latest",
+      "status": "ok",
+      "effects": {
+        "source_pressure": -3,
+        "source_leverage": 1,
+        "partner_pressure": -3,
+        "partner_leverage": 1,
+        "supplies_delta": 0,
+        "intel_delta": 1
+      }
+    },
+    {
+      "cycle": 4,
+      "source": "Glass Archive",
+      "partner": "Morrow Division",
+      "move": "bargain",
+      "terms": "Mutual knowledge sharing in exchange for division of anomalies, with 20% division ratio.",
+      "confidence": 0.72,
+      "source_model": "llama3.2:latest",
+      "status": "ok",
+      "effects": {
+        "source_pressure": -2,
+        "source_leverage": 1,
+        "partner_pressure": -1,
+        "partner_leverage": 0,
+        "supplies_delta": 1,
+        "intel_delta": 0
+      }
+    },
+    {
+      "cycle": 4,
+      "source": "Morrow Division",
+      "partner": "Helios Prospectors",
+      "move": "align",
+      "terms": "Propose joint sector patrol for mutual security benefits",
+      "confidence": 0.82,
+      "source_model": "llama3.2:latest",
+      "status": "ok",
+      "effects": {
+        "source_pressure": -3,
+        "source_leverage": 1,
+        "partner_pressure": -3,
+        "partner_leverage": 1,
+        "supplies_delta": 0,
+        "intel_delta": 1
+      }
+    },
+    {
+      "cycle": 5,
+      "source": "Glass Archive",
+      "partner": "Morrow Division",
+      "move": "bargain",
+      "terms": "Share intel on anomaly cycles for mutual benefit in sector stability,",
+      "confidence": 0.65,
+      "source_model": "llama3.2:latest",
+      "status": "ok",
+      "effects": {
+        "source_pressure": -2,
+        "source_leverage": 1,
+        "partner_pressure": -1,
+        "partner_leverage": 0,
+        "supplies_delta": 1,
+        "intel_delta": 0
+      }
+    },
+    {
+      "cycle": 5,
+      "source": "Morrow Division",
+      "partner": "Helios Prospectors",
+      "move": "bargain",
+      "terms": "Morrow Division offers sector access in exchange for Helios Prospectors' artifact extraction cooperation, pending 30% division of profits.",
+      "confidence": 0.72,
+      "source_model": "llama3.2:latest",
+      "status": "ok",
+      "effects": {
+        "source_pressure": -2,
+        "source_leverage": 1,
+        "partner_pressure": -1,
+        "partner_leverage": 0,
+        "supplies_delta": 1,
+        "intel_delta": 0
+      }
+    },
+    {
+      "cycle": 5,
+      "source": "Helios Prospectors",
+      "partner": "Glass Archive",
+      "move": "align",
+      "terms": "temporary alliance to stabilize the sector, securing relics for both factions.",
+      "confidence": 0.66,
+      "source_model": "llama3.2:latest",
+      "status": "ok",
+      "effects": {
+        "source_pressure": -3,
+        "source_leverage": 1,
+        "partner_pressure": -3,
+        "partner_leverage": 1,
+        "supplies_delta": 0,
+        "intel_delta": 1
+      }
+    }
+  ],
+  "snapshots": [
+    {
+      "cycle": 1,
+      "label": "campaign_reset",
+      "intel": 0,
+      "supplies": 6,
+      "threat_clock": 18,
+      "sector_stability": 62,
+      "neutral_control": 13,
+      "Helios Prospectors_pressure": 28,
+      "Helios Prospectors_leverage": 34,
+      "Helios Prospectors_control": 0,
+      "Glass Archive_pressure": 21,
+      "Glass Archive_leverage": 29,
+      "Glass Archive_control": 0,
+      "Morrow Division_pressure": 39,
+      "Morrow Division_leverage": 42,
+      "Morrow Division_control": 0
+    },
+    {
+      "cycle": 2,
+      "label": "mission_resolution",
+      "intel": 0,
+      "supplies": 3,
+      "threat_clock": 18,
+      "sector_stability": 54,
+      "neutral_control": 12,
+      "Helios Prospectors_pressure": 35,
+      "Helios Prospectors_leverage": 30,
+      "Helios Prospectors_control": 0,
+      "Glass Archive_pressure": 18,
+      "Glass Archive_leverage": 27,
+      "Glass Archive_control": 1,
+      "Morrow Division_pressure": 39,
+      "Morrow Division_leverage": 42,
+      "Morrow Division_control": 0
+    },
+    {
+      "cycle": 3,
+      "label": "mission_resolution",
+      "intel": 8,
+      "supplies": 1,
+      "threat_clock": 18,
+      "sector_stability": 46,
+      "neutral_control": 11,
+      "Helios Prospectors_pressure": 29,
+      "Helios Prospectors_leverage": 35,
+      "Helios Prospectors_control": 1,
+      "Glass Archive_pressure": 22,
+      "Glass Archive_leverage": 29,
+      "Glass Archive_control": 1,
+      "Morrow Division_pressure": 39,
+      "Morrow Division_leverage": 42,
+      "Morrow Division_control": 0
+    },
+    {
+      "cycle": 4,
+      "label": "mission_resolution",
+      "intel": 8,
+      "supplies": 0,
+      "threat_clock": 18,
+      "sector_stability": 41,
+      "neutral_control": 10,
+      "Helios Prospectors_pressure": 29,
+      "Helios Prospectors_leverage": 35,
+      "Helios Prospectors_control": 1,
+      "Glass Archive_pressure": 29,
+      "Glass Archive_leverage": 25,
+      "Glass Archive_control": 1,
+      "Morrow Division_pressure": 36,
+      "Morrow Division_leverage": 40,
+      "Morrow Division_control": 1
+    },
+    {
+      "cycle": 5,
+      "label": "agent_round",
+      "intel": 17,
+      "supplies": 0,
+      "threat_clock": 19,
+      "sector_stability": 43,
+      "neutral_control": 10,
+      "Helios Prospectors_pressure": 23,
+      "Helios Prospectors_leverage": 41,
+      "Helios Prospectors_control": 1,
+      "Glass Archive_pressure": 22,
+      "Glass Archive_leverage": 27,
+      "Glass Archive_control": 1,
+      "Morrow Division_pressure": 32,
+      "Morrow Division_leverage": 45,
+      "Morrow Division_control": 1
+    },
+    {
+      "cycle": 5,
+      "label": "mission_resolution",
+      "intel": 52,
+      "supplies": 0,
+      "threat_clock": 19,
+      "sector_stability": 29,
+      "neutral_control": 7,
+      "Helios Prospectors_pressure": 28,
+      "Helios Prospectors_leverage": 43,
+      "Helios Prospectors_control": 2,
+      "Glass Archive_pressure": 22,
+      "Glass Archive_leverage": 27,
+      "Glass Archive_control": 1,
+      "Morrow Division_pressure": 27,
+      "Morrow Division_leverage": 51,
+      "Morrow Division_control": 3
+    },
+    {
+      "cycle": 6,
+      "label": "agent_round",
+      "intel": 59,
+      "supplies": 0,
+      "threat_clock": 20,
+      "sector_stability": 33,
+      "neutral_control": 7,
+      "Helios Prospectors_pressure": 24,
+      "Helios Prospectors_leverage": 48,
+      "Helios Prospectors_control": 1,
+      "Glass Archive_pressure": 15,
+      "Glass Archive_leverage": 29,
+      "Glass Archive_control": 2,
+      "Morrow Division_pressure": 24,
+      "Morrow Division_leverage": 56,
+      "Morrow Division_control": 3
+    },
+    {
+      "cycle": 6,
+      "label": "mission_resolution",
+      "intel": 88,
+      "supplies": 0,
+      "threat_clock": 20,
+      "sector_stability": 20,
+      "neutral_control": 6,
+      "Helios Prospectors_pressure": 29,
+      "Helios Prospectors_leverage": 51,
+      "Helios Prospectors_control": 2,
+      "Glass Archive_pressure": 16,
+      "Glass Archive_leverage": 29,
+      "Glass Archive_control": 2,
+      "Morrow Division_pressure": 18,
+      "Morrow Division_leverage": 61,
+      "Morrow Division_control": 3
+    }
+  ],
+  "ai_config": {
+    "num_agents": 3
+  },
+  "ai_agents": [
+    {
+      "name": "Aegis Unit",
+      "intel": 20,
+      "artifacts": 0,
+      "last_outcome": "Success",
+      "last_mission_type": "survey",
+      "last_sector": "Resonance Stairwell",
+      "last_cycle": 6
+    },
+    {
+      "name": "Vanta Cell",
+      "intel": 19,
+      "artifacts": 0,
+      "last_outcome": "Compromised",
+      "last_mission_type": "survey",
+      "last_sector": "Signal Orchard",
+      "last_cycle": 6
+    },
+    {
+      "name": "Orchid Team",
+      "intel": 28,
+      "artifacts": 2,
+      "last_outcome": "Success",
+      "last_mission_type": "containment",
+      "last_sector": "Signal Orchard",
+      "last_cycle": 6
+    }
+  ],
+  "rival_policy": {
+    "mode": "heuristic",
+    "epsilon": 0.12,
+    "alpha": 0.15,
+    "gamma": 0.92,
+    "competitor_reward_cap": 22.0,
+    "q_value_clip": 35.0
+  },
+  "rival_bandit": {},
+  "rival_q": {},
+  "endgame": {
+    "ended": true,
+    "result": "Faction Victory",
+    "winner": "Morrow Division",
+    "trigger_cycle": 6,
+    "summary": "Morrow Division converted regional control and leverage into full operational dominance.",
+    "details": [
+      "Cycle reached: 6",
+      "Recovered artifacts: 2",
+      "Top controlling faction: Morrow Division (3 sectors)",
+      "Threat clock: 20",
+      "Sector stability: 27"
+    ]
+  },
+  "mas": {
+    "order": "rotation",
+    "rotation_idx": 2,
+    "agents": {
+      "Helios Prospectors": {
+        "policy": "bandit",
+        "epsilon": 0.12,
+        "factors": {
+          "intel": 1.35,
+          "leverage": 1.25,
+          "threat": -0.35,
+          "stability": 0.45,
+          "supplies": 0.25,
+          "pressure": -0.25
+        },
+        "bandit": {
+          "counts": {
+            "thr=low|sup=low|stab=mid|p=low|l=mid|c=low": {
+              "extract": 2
+            }
+          },
+          "values": {
+            "thr=low|sup=low|stab=mid|p=low|l=mid|c=low": {
+              "extract": 9.8
+            }
+          }
+        }
+      },
+      "Glass Archive": {
+        "policy": "bandit",
+        "epsilon": 0.12,
+        "factors": {
+          "intel": 1.45,
+          "leverage": 1.0,
+          "threat": -0.35,
+          "stability": 0.7,
+          "supplies": 0.25,
+          "pressure": -0.25
+        },
+        "bandit": {
+          "counts": {
+            "thr=low|sup=low|stab=mid|p=low|l=mid|c=low": {
+              "fortify": 2
+            }
+          },
+          "values": {
+            "thr=low|sup=low|stab=mid|p=low|l=mid|c=low": {
+              "fortify": 2.95
+            }
+          }
+        }
+      },
+      "Morrow Division": {
+        "policy": "bandit",
+        "epsilon": 0.12,
+        "factors": {
+          "intel": 1.0,
+          "leverage": 1.2,
+          "threat": -0.35,
+          "stability": 0.45,
+          "supplies": 0.25,
+          "pressure": -0.4
+        },
+        "bandit": {
+          "counts": {
+            "thr=low|sup=low|stab=mid|p=mid|l=mid|c=low": {
+              "extract": 1
+            },
+            "thr=low|sup=low|stab=mid|p=low|l=mid|c=mid": {
+              "extract": 1
+            }
+          },
+          "values": {
+            "thr=low|sup=low|stab=mid|p=mid|l=mid|c=low": {
+              "extract": 6.2
+            },
+            "thr=low|sup=low|stab=mid|p=low|l=mid|c=mid": {
+              "extract": 7.2
+            }
+          }
+        }
+      }
+    }
+  },
+  "autonomous_stack": {
+    "enabled": true,
+    "player_expeditions_per_tick": 3,
+    "faction_rounds_per_tick": 8,
+    "use_ollama_player_commit": true
+  }
+}

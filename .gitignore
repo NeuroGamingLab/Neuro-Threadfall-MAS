@@ -1,0 +1,77 @@
+# --- Bytecode & caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+.pycache/
+
+# --- Virtual environments ---
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.*
+!.env.example
+
+# --- Packaging / build ---
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Test & type / lint caches ---
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+cython_debug/
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+.cache/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- IDE / editors ---
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Project / local data ---
+qdrant_storage/
+*.sqlite3
+*.db
+.streamlit/secrets.toml
+
+# --- Markdown: ignore all .md except repository root README.md ---
+*.md
+!/README.md

@@ -1,0 +1,47 @@
+Objectives:
+
+1. Review the games listed on this page:
+   https://en.wikipedia.org/wiki/List_of_video_games_listed_among_the_best
+
+2. Identify the recurring design patterns that make these games successful. Focus on:
+   - core gameplay loops
+   - player motivation and progression
+   - emotional engagement
+   - replayability
+   - social, competitive, or cooperative features
+   - innovation in mechanics, narrative, or immersion
+
+3. Propose 3 original game concepts inspired by the strongest ideas from those games.
+   Each concept should combine mechanics or design principles from at least 5 existing games, but it must still feel new rather than copied.
+
+4. Select the single most innovative concept and expand it into a polished game pitch.
+
+Output Requirements:
+
+- Start with a short summary of the most common strengths found across the reviewed games.
+- Present 3 game concepts with:
+  - title
+  - genre
+  - platform
+  - target audience
+  - core gameplay loop
+  - key innovation
+  - which existing games influenced it
+- Then choose the best concept and provide:
+  - a one-paragraph elevator pitch
+  - a detailed gameplay overview
+  - progression and reward systems
+  - multiplayer or social features, if relevant
+  - art style and tone
+  - why this idea is innovative in today's market
+
+Constraints:
+
+- Do not simply clone existing games.
+- Combine only the strongest compatible ideas.
+- Prioritize originality, commercial potential, and player engagement.
+- Keep the concept realistic enough to be developed by a modern indie or mid-sized studio unless otherwise stated.
+
+Goal:
+
+Create a game idea that feels fresh, compelling, and highly marketable by learning from the best games ever made and recombining their strengths in a new way.

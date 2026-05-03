@@ -1,0 +1,272 @@
+Threadfall ML Architecture
+
+Goal:
+Integrate machine learning into Threadfall in a way that strengthens the fantasy of exploring a world with shifting rules, while keeping gameplay readable, fair, and technically realistic for an indie or mid-sized studio.
+
+
+1. High-Level Design
+
+Threadfall is the best concept for ML integration because its core fantasy already depends on discovery, adaptation, uncertainty, and emergent behavior. Machine learning should not replace game design. It should support four systems:
+
+- anomaly understanding
+- adaptive NPC behavior
+- mission generation
+- squad-aware assistance
+
+The safest and most effective design is a hybrid architecture:
+
+- unsupervised or self-supervised learning for pattern discovery
+- symbolic game rules for fairness and control
+- agentic planners for decision-making
+- offline training plus lightweight runtime inference
+
+
+2. Core ML Systems
+
+System A: Anomaly Pattern Model
+
+Purpose:
+Learn latent structure across anomaly events, room layouts, player actions, and mission outcomes.
+
+What it does:
+- clusters anomaly types based on how players interact with them
+- groups rooms, encounters, and hazards by behavioral similarity rather than hand-authored labels alone
+- identifies which anomaly combinations create confusion, delight, teamwork, failure, or mastery
+
+Input Data:
+- room topology
+- anomaly parameters
+- object interactions
+- player movement traces
+- communication pings and tool use
+- extraction success or failure
+
+Best ML Approach:
+- unsupervised clustering
+- embedding models
+- dimensionality reduction for similarity mapping
+
+Why it helps:
+This lets the game discover hidden categories such as "high-chaos but fun," "too confusing early game," or "encourages strong co-op behavior." Designers can then tune content using real player behavior instead of intuition alone.
+
+
+System B: Adaptive Enemy and Entity Behavior
+
+Purpose:
+Make creatures, sentries, and rival explorers feel observant and reactive without becoming unfair.
+
+What it does:
+- identifies squad behavior patterns such as stealth-heavy, speedrun, bait-and-trap, or split-team exploration
+- shifts enemy tactics within bounded designer-authored ranges
+- changes patrol style, pursuit logic, ambush frequency, and environmental manipulation based on learned player tendencies
+
+Best ML Approach:
+- unsupervised player style clustering
+- behavior embeddings
+- optional reinforcement learning in simulation for tactical policy selection
+
+Runtime Safety Rule:
+The AI never gets impossible knowledge. It can only adapt within perception, memory, and tool constraints already defined by the game rules.
+
+Why it helps:
+Players feel like the world is learning from them, which fits Threadfall's tone. The experience stays fresh without requiring endless handcrafted enemy variants.
+
+
+System C: Mission Director and Anomaly Composer
+
+Purpose:
+Build better expeditions by selecting anomaly combinations, room sequences, objectives, and pacing based on learned engagement patterns.
+
+What it does:
+- predicts which mission structures are likely to create tension, cooperation, and satisfying resolution
+- avoids repetitive or unreadable anomaly stacks
+- personalizes runs to squad skill level and play style while preserving surprise
+
+Best ML Approach:
+- unsupervised mission archetype discovery
+- recommendation or ranking models
+- contextual bandits or constrained policy selection for runtime content choice
+
+Why it helps:
+Instead of pure random generation, the game can generate missions that feel authored, dramatic, and replayable.
+
+
+System D: Squad Companion Drone
+
+Purpose:
+Provide an in-fiction assistant that feels intelligent because it learns from the team over time.
+
+What it does:
+- watches how players solve puzzles and navigate anomaly-heavy spaces
+- learns preferred support styles such as scanning, marking routes, retrieving tools, or distracting threats
+- gives contextual suggestions without solving everything automatically
+
+Best ML Approach:
+- imitation learning from player behavior
+- preference modeling
+- retrieval over past squad encounters
+
+Why it helps:
+This creates a memorable "agentic AI companion" that is mechanically useful and narratively aligned with the setting.
+
+
+3. Agentic Layer
+
+Machine learning alone should not control the full game logic. Each intelligent entity should use an agent architecture with:
+
+- memory
+- perception
+- goals
+- planner
+- action budget
+
+Recommended Structure:
+
+- Memory:
+  Stores recent anomalies seen, player tactics observed, squad threat history, and important room events.
+
+- Perception:
+  Receives only what the entity can legitimately sense through line of sight, sound, scans, or faction intelligence.
+
+- Goal System:
+  Chooses objectives such as hunt, observe, isolate, protect, escape, recover artifact, or manipulate anomaly.
+
+- Planner:
+  Uses symbolic logic or utility-based planning to choose actions.
+
+- ML Support:
+  Supplies predictions such as "this squad usually splits after discovery" or "this anomaly pair leads to panic."
+
+This hybrid model is much safer than full black-box control because designers keep direct control over what actions agents are allowed to take.
+
+
+4. Offline vs Runtime
+
+Offline Training:
+- train player-style clusters
+- train anomaly embeddings
+- simulate mission outcomes
+- fit recommendation models for mission composition
+- tune NPC behavior policies
+
+Runtime Inference:
+- classify current squad style
+- rank suitable anomaly combinations
+- choose bounded tactical adjustments for enemies
+- personalize companion drone assistance
+
+Do Not Train Heavy Models Live In Game:
+Full online training is expensive, unstable, and hard to debug. Runtime should mostly perform inference using compact models trained offline and updated between content releases or telemetry cycles.
+
+
+5. Data Pipeline
+
+Telemetry to Collect:
+- mission seed
+- anomaly types present
+- room graph
+- player pathing
+- tool usage
+- time to first discovery
+- deaths and causes
+- extraction outcome
+- co-op interaction events
+- confusion markers such as repeated failed interactions
+
+Pipeline Stages:
+1. Collect anonymized session data
+2. Build feature vectors per mission, room, anomaly, and squad
+3. Train embeddings and clustering models
+4. Review clusters with designers
+5. Export runtime-friendly model artifacts
+6. Deploy in seasonal or milestone updates
+
+
+6. Fairness and UX Rules
+
+To keep ML systems fun instead of annoying, follow these design constraints:
+
+- adaptation must be subtle, not omniscient
+- players should be able to understand why something changed
+- no rubber-banding that invalidates mastery
+- early-game players should get clearer anomalies and simpler compositions
+- high-complexity anomaly stacks should unlock only after demonstrated mastery
+- any companion AI must assist, not replace discovery
+
+Good player feeling:
+"The world is responding to how we play."
+
+Bad player feeling:
+"The game is cheating because it read our inputs."
+
+
+7. Minimal Viable ML Version
+
+If building this with limited resources, start with:
+
+- unsupervised clustering of player styles
+- anomaly similarity embeddings
+- mission director that selects from hand-authored anomaly sets
+- simple adaptive drone assistant based on squad preferences
+
+This delivers real ML value without requiring massive infrastructure or dangerous fully autonomous gameplay systems.
+
+
+8. More Advanced Version
+
+Later expansions could include:
+
+- simulated training environments for enemy policies
+- faction-level strategic agents that adapt across multiple player sessions
+- player-created anomaly journals summarized into searchable knowledge graphs
+- cross-squad learning where the world evolves based on aggregate community behavior
+
+
+9. Suggested Tech Stack
+
+Offline:
+- Python
+- PyTorch or TensorFlow
+- scikit-learn for clustering and baseline models
+- telemetry warehouse with parquet or SQL storage
+
+Runtime:
+- Unity or Unreal integration layer
+- ONNX Runtime or lightweight inference service
+- behavior tree, GOAP, or utility AI for final action selection
+
+Recommended Practical Split:
+- ML produces scores, embeddings, and classifications
+- game logic consumes those outputs through deterministic rules
+
+
+10. Best First Prototype
+
+Prototype Name:
+Adaptive Anomaly Director
+
+Prototype Scope:
+- define 12 anomaly types
+- define 20 room templates
+- collect playtest data from 30 to 50 sessions
+- cluster player squads by behavior
+- build a director that selects the next room and anomaly pair based on tension and clarity targets
+
+Success Criteria:
+- players report that runs feel varied but coherent
+- teams experience more cooperation moments
+- reduced "confusing for the wrong reasons" failure states
+- higher replay intent compared with pure random mission generation
+
+
+11. Final Recommendation
+
+For Threadfall, the strongest integration is not "an AI enemy that learns everything."
+The strongest integration is a layered learning ecosystem:
+
+- the world learns what kinds of anomalies create compelling play
+- enemies learn broad squad tendencies
+- missions adapt to player mastery
+- a companion drone learns how the team likes to solve problems
+
+That combination makes the ML feel native to the game fantasy, technically achievable, and valuable to both gameplay and long-term retention.

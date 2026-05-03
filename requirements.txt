@@ -1,0 +1,6 @@
+streamlit>=1.43
+qdrant-client>=1.9
+torch>=2.2
+numpy>=1.26
+plotly>=5.22
+
