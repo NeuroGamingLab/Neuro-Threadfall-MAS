@@ -75,3 +75,5 @@ qdrant_storage/
 # --- Markdown: ignore all .md except repository root README.md ---
 *.md
 !/README.md
+!security-audits/
+!security-audits/*.md
