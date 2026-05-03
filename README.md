@@ -26,6 +26,12 @@ Threadfall is a **Streamlit monolith**: almost all runtime state lives in `st.se
 
 > **Viewing diagrams:** Fenced blocks use [Mermaid](https://mermaid.js.org/) (`flowchart`, `sequenceDiagram`). They render on GitHub and in Markdown previews that enable Mermaid; if you only see source, switch viewer or paste the block into the [Mermaid Live Editor](https://mermaid.live). Charts set an explicit **dark** theme so text and edges stay visible on GitHub’s canvas (light-on-light is a common default failure mode).
 
+![Threadfall prototype screenshot 2](image2.png)
+
+![Threadfall prototype screenshot 3](image3.png)
+
+![Threadfall prototype screenshot 4](image4.png)
+
 ### Component diagram
 
 ```mermaid
